@@ -22,6 +22,40 @@ int layoutId = inflaterContext.getResources().getIdentifier("activity_main", "la
 ```java 
 View view = layoutInflater.inflate(layoutId, (ViewGroup) getWindow().getDecorView(), false);
 ```  
+## 效果：
+一个普通应用(OtherApp)，布局里包括一行文字，和一张图片；其中文字部分使用了自定义View(MyTextView extends TextView),图片对应ImageView。
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pw.qlm.otherapp.MainActivity">
+
+    <pw.qlm.otherapp.MyTextView
+        android:id="@+id/mtv"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="This layout is from other app"/>
+
+    <ImageView
+        android:layout_below="@id/mtv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/cat"/>
+
+</RelativeLayout>
+```
+![](Screenshot_20170411-162333.png)
+
+---
+
+另一个应用（RemoteInflater App），根据使用步骤中的代码加载OtherAPP中的布局（包括其中的资源，自定义View）
+
+![](Screenshot_20170411-162401.png)
     
 ## 原理：
   ```java
