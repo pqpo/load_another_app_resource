@@ -49,13 +49,13 @@ View view = layoutInflater.inflate(layoutId, (ViewGroup) getWindow().getDecorVie
 
 </RelativeLayout>
 ```
-![](Screenshot_20170411-162333.png)
+![](http://src.qlm.pw/ImgOtherApp.png?imageView2/3/w/500/h/400/q/60|watermark/2/text/cWxtLnB3/font/5a6L5L2T/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 ---
 
 另一个应用（RemoteInflater App），根据使用步骤中的代码加载OtherAPP中的布局（包括其中的资源，自定义View）
 
-![](Screenshot_20170411-162401.png)
+![](http://src.qlm.pw/ImgRemoteInflaterApp.png?imageView2/3/w/500/h/400/q/60|watermark/2/text/cWxtLnB3/font/5a6L5L2T/fontsize/500/fill/I0VGRUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
     
 ## 原理：
   ```java
