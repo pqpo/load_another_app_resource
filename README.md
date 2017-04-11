@@ -23,7 +23,7 @@ int layoutId = inflaterContext.getResources().getIdentifier("activity_main", "la
 View view = layoutInflater.inflate(layoutId, (ViewGroup) getWindow().getDecorView(), false);
 ```  
 ## 效果：
-一个普通应用(OtherApp)，布局里包括一行文字，和一张图片；其中文字部分使用了自定义View(MyTextView extends TextView),图片对应ImageView。
+一个普通应用([otherApp.apk](otherApp.apk "OtherApp"))，布局里包括一行文字，和一张图片；其中文字部分使用了自定义View(MyTextView extends TextView),图片对应ImageView。
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
